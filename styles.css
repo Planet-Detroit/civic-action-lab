@@ -92,7 +92,15 @@ p.body { font-size: 18px; line-height: 1.7; color: rgb(68, 68, 68); max-width: 6
 
 .tools-dev-inner { max-width: 1100px; margin: 0 auto; }
 
-.tools-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 40px; background: rgb(45, 128, 195); }
+.tools-tier-label { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgb(45, 128, 195); margin-bottom: 0; margin-top: 48px; }
+
+.tools-tier-label:first-of-type { margin-top: 0; }
+
+.tools-grid { display: grid; gap: 2px; margin-top: 16px; background: rgb(45, 128, 195); }
+
+.tools-grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+.tools-grid-3 { grid-template-columns: repeat(3, 1fr); }
 
 .tool-card { background: rgb(244, 248, 253); padding: 36px; }
 
@@ -147,7 +155,8 @@ footer a:hover { color: rgb(255, 255, 255); }
 @media (max-width: 900px) {
   .pillars-grid { grid-template-columns: repeat(2, 1fr); }
   .serve-grid { grid-template-columns: repeat(2, 1fr); }
-  .tools-grid { grid-template-columns: repeat(2, 1fr); }
+  .tools-grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .tools-grid-3 { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 720px) {
@@ -157,5 +166,6 @@ footer a:hover { color: rgb(255, 255, 255); }
 @media (max-width: 540px) {
   .pillars-grid { grid-template-columns: 1fr; }
   .serve-grid { grid-template-columns: 1fr; }
-  .tools-grid { grid-template-columns: 1fr; }
+  .tools-grid-2 { grid-template-columns: 1fr; }
+  .tools-grid-3 { grid-template-columns: 1fr; }
 }
