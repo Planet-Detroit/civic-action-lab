@@ -16,6 +16,31 @@
 <meta name="twitter:description" content="AI-powered civic infrastructure that moves readers from informed to involved.">
 <link rel="icon" href="https://planetdetroit.org/wp-content/uploads/2025/08/cropped-globe-1.png">
 <link rel="stylesheet" href="styles.css">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5QQJ9SVV07"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5QQJ9SVV07');
+
+  // Track CTA clicks as custom events
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a');
+    if (!link) return;
+
+    if (link.classList.contains('hero-cta')) {
+      gtag('event', 'cta_click', { link_text: 'Get in touch - hero', link_url: link.href });
+    } else if (link.classList.contains('preview-link')) {
+      gtag('event', 'cta_click', { link_text: 'See it live', link_url: link.href });
+    } else if (link.classList.contains('btn-primary')) {
+      gtag('event', 'cta_click', { link_text: 'Get in touch - footer', link_url: link.href });
+    } else if (link.classList.contains('btn-secondary')) {
+      gtag('event', 'cta_click', { link_text: 'Visit Planet Detroit', link_url: link.href });
+    }
+  });
+</script>
 </head>
 <body>
 
