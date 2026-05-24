@@ -23,19 +23,11 @@ The waitlist form collects: **Name, Email, Organization, Role**.
 
 It uses [Formspree](https://formspree.io) to handle submissions — no backend needed. Formspree stores all responses in a dashboard and sends email notifications.
 
-### Setup (one-time)
+### Setup
 
-1. Go to [formspree.io](https://formspree.io) and create a free account
-2. Create a new form
-3. In the form's **Settings > Email Notifications**, add both recipients:
-   - `nina@planetdetroit.org`
-   - Ashley's email address
-4. Copy the form ID (the part after `https://formspree.io/f/`)
-5. In `index.html`, replace `YOUR_FORM_ID` in the form action URL:
-   ```html
-   <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" ...>
-   ```
-6. Commit and push — the form will be live
+The form is connected to Formspree form ID `meedlkwr`. Email notifications go to Nina and Ashley.
+
+To change notification recipients, log into [formspree.io](https://formspree.io) and update the form's **Settings > Email Notifications**.
 
 ### Viewing responses
 
