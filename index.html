@@ -40,6 +40,16 @@
       gtag('event', 'cta_click', { link_text: 'Visit Planet Detroit', link_url: link.href });
     }
   });
+
+  // Track waitlist form submissions
+  document.addEventListener('submit', function(e) {
+    if (e.target.classList.contains('waitlist-form')) {
+      gtag('event', 'waitlist_signup', {
+        organization: e.target.querySelector('#organization').value,
+        role: e.target.querySelector('#role').value
+      });
+    }
+  });
 </script>
 </head>
 <body>
@@ -211,6 +221,38 @@
   <p class="body">Planet Detroit is an independent nonprofit environmental newsroom founded in 2019, operating with a small, dedicated team. We have earned recognition for health and environmental reporting, engagement journalism, and business sustainability from SPJ Detroit, INN, and LION Publishers.</p>
   <p class="body">The PD Civic Action Lab grows from that foundation. Our founder spent 15 years as a community planner for Oakland County before building Planet Detroit — giving the lab an unusually deep understanding of how civic infrastructure actually works, and what information residents need to use it. The Civic Action Builder is not a prototype awaiting real-world testing. It is already deployed, already in use, and already helping readers show up.</p>
   <p class="body">Planet Detroit has received institutional support from the MacArthur Foundation, Kresge Foundation, Joyce Foundation, Erb Family Foundation, Solutions Journalism Network, Press Forward, Google News Initiative, Report for America, Patrice K. Aaron Family Foundation, Porter Family Foundation, Community Foundation for Southeast Michigan, American Press Institute, Pulitzer Center, MIT Environmental Solutions Journalism Fellowship, and NewsMatch.</p>
+</div>
+
+<!-- WAITLIST -->
+<div class="waitlist" id="waitlist">
+  <div class="waitlist-inner">
+    <div class="section-label">Join the Waitlist</div>
+    <h2>Interested in piloting our tools at your newsroom?</h2>
+    <p class="body">We're expanding our pilot cohort and looking for community newsrooms ready to try new civic engagement tools. Sign up and we'll be in touch.</p>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="waitlist-form">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="organization">Organization</label>
+          <input type="text" id="organization" name="organization" required>
+        </div>
+        <div class="form-field">
+          <label for="role">Role</label>
+          <input type="text" id="role" name="role" required>
+        </div>
+      </div>
+      <button type="submit" class="btn-primary">Join the waitlist</button>
+    </form>
+  </div>
 </div>
 
 <!-- CTA FOOTER -->

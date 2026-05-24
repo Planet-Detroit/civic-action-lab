@@ -126,6 +126,34 @@ p.body { font-size: 18px; line-height: 1.7; color: rgb(68, 68, 68); max-width: 6
 
 .about-section { padding: 72px 40px; max-width: 1100px; margin: 0 auto; }
 
+/* WAITLIST */
+
+.waitlist { background: rgb(47, 51, 62); padding: 80px 40px; }
+
+.waitlist-inner { max-width: 680px; margin: 0 auto; }
+
+.waitlist .section-label { color: rgb(45, 128, 195); }
+
+.waitlist h2 { color: rgb(255, 255, 255); margin-bottom: 16px; }
+
+.waitlist p.body { color: rgb(197, 216, 237); margin-bottom: 36px; }
+
+.waitlist-form { display: flex; flex-direction: column; gap: 20px; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+.form-field { display: flex; flex-direction: column; }
+
+.form-field label { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgb(197, 216, 237); margin-bottom: 8px; }
+
+.form-field input { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 16px; padding: 12px 16px; border: 1px solid rgba(197, 216, 237, 0.3); border-radius: 2px; background: rgba(255, 255, 255, 0.08); color: rgb(255, 255, 255); transition: border-color 0.2s; }
+
+.form-field input:focus { outline: none; border-color: rgb(45, 128, 195); }
+
+.form-field input::placeholder { color: rgba(197, 216, 237, 0.4); }
+
+.waitlist-form .btn-primary { align-self: flex-start; border: none; cursor: pointer; font-family: "Helvetica Neue", Arial, sans-serif; }
+
 /* CTA FOOTER */
 
 .cta-footer { padding: 80px 40px; text-align: center; background: rgb(234, 242, 251); }
@@ -168,4 +196,5 @@ footer a:hover { color: rgb(255, 255, 255); }
   .serve-grid { grid-template-columns: 1fr; }
   .tools-grid-2 { grid-template-columns: 1fr; }
   .tools-grid-3 { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
 }
