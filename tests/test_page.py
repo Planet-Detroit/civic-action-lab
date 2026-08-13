@@ -28,19 +28,21 @@ def check(name, condition, detail=""):
 
 html_src = INDEX.read_text()
 
-# 1. The waitlist section has a button-styled link that opens the Google Form
-#    in a new tab (btn-primary class = styled as a button, not a text link).
-btn = re.search(
-    r'<a[^>]+href="' + re.escape(GFORM_URL) + r'"[^>]*>', html_src
-)
+# 1. Two waitlist buttons open the Google Form in a new tab: one in the hero,
+#    one in the waitlist section. Both carry waitlist-cta so GA logs them as
+#    waitlist clicks.
+btns = re.findall(r'<a[^>]+href="' + re.escape(GFORM_URL) + r'"[^>]*>', html_src)
 check(
-    "Waitlist button links to the Google Form",
-    btn is not None
-    and "btn-primary" in btn.group(0)
-    and 'target="_blank"' in btn.group(0)
-    and 'rel="noopener"' in btn.group(0),
-    f"found: {btn.group(0) if btn else 'no link to form'}",
+    "Two waitlist buttons link to the Google Form",
+    len(btns) == 2
+    and all(
+        "waitlist-cta" in b and 'target="_blank"' in b and 'rel="noopener"' in b
+        for b in btns
+    ),
+    f"found {len(btns)}: {btns}",
 )
+hero_block = html_src.split('class="hero"')[1].split("<section")[0]
+check("Hero contains a waitlist button", "waitlist-cta" in hero_block)
 
 # 2. No embedded iframe — Nina rejected the embed (looked broken); the button
 #    is the intended design. This catches an accidental revert.

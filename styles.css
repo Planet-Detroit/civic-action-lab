@@ -14,9 +14,15 @@ body { font-family: Georgia, "Times New Roman", serif; color: rgb(47, 51, 62); b
 
 .hero-sub { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 18px; line-height: 1.6; max-width: 580px; margin: 0 auto 40px; color: rgb(197, 216, 237); font-weight: 300; }
 
-.hero-cta { display: inline-block; background: rgb(45, 128, 195); color: rgb(255, 255, 255); font-family: "Helvetica Neue", Arial, sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 2px; transition: background 0.2s; }
+.hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+.hero-cta { display: inline-block; background: rgb(45, 128, 195); color: rgb(255, 255, 255); font-family: "Helvetica Neue", Arial, sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 2px; transition: background 0.2s, color 0.2s; }
 
 .hero-cta:hover { background: rgb(35, 108, 170); }
+
+.hero-cta-secondary { background: transparent; border: 2px solid rgba(197, 216, 237, 0.5); padding: 12px 30px; }
+
+.hero-cta-secondary:hover { background: rgba(255, 255, 255, 0.1); border-color: rgb(255, 255, 255); }
 
 /* SECTIONS */
 

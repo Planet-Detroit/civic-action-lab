@@ -30,7 +30,15 @@
     var link = e.target.closest('a');
     if (!link) return;
 
-    if (link.classList.contains('hero-cta')) {
+    // waitlist-cta is checked first because the hero waitlist button also
+    // carries hero-cta for styling — it should log as a waitlist click.
+    if (link.classList.contains('waitlist-cta')) {
+      gtag('event', 'waitlist_click', {
+        link_text: 'Join the beta waitlist',
+        link_location: link.closest('.hero') ? 'hero' : 'waitlist section',
+        link_url: link.href
+      });
+    } else if (link.classList.contains('hero-cta')) {
       gtag('event', 'cta_click', { link_text: 'Get in touch - hero', link_url: link.href });
     } else if (link.classList.contains('preview-link')) {
       gtag('event', 'cta_click', { link_text: 'See it live', link_url: link.href });
@@ -38,8 +46,6 @@
       gtag('event', 'cta_click', { link_text: 'Get in touch - footer', link_url: link.href });
     } else if (link.classList.contains('btn-secondary')) {
       gtag('event', 'cta_click', { link_text: 'Visit Planet Detroit', link_url: link.href });
-    } else if (link.classList.contains('waitlist-cta')) {
-      gtag('event', 'waitlist_click', { link_text: 'Join the beta waitlist', link_url: link.href });
     }
   });
   // Note: signups happen on the Google Form, which GA on this page can't observe.
@@ -54,7 +60,10 @@
   <div class="hero-eyebrow">PD Civic Action Lab</div>
   <h1>Local journalism tells you what's wrong.<br><em>We're building what comes next.</em></h1>
   <p class="hero-sub">Civic infrastructure that moves readers from informed to involved — and helps community newsrooms become a force for democratic participation.</p>
-  <a href="#contact" class="hero-cta">Get in touch</a>
+  <div class="hero-buttons">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe5XGSfHNzg9tgDWIGP4QKfFAFhV_vvY-Gl3NdPk4IQWWqSvQ/viewform" class="hero-cta waitlist-cta" target="_blank" rel="noopener">Join the beta waitlist</a>
+    <a href="#contact" class="hero-cta hero-cta-secondary">Get in touch</a>
+  </div>
 </div>
 
 <!-- WHY -->
