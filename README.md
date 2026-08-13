@@ -44,7 +44,7 @@ The waitlist previously used Formspree (form ID `meedlkwr`, 4 fields: Name, Emai
 1. **Hero** — headline + "Get in touch" CTA
 2. **The Problem We're Solving** — why civic infrastructure matters
 3. **How We Work** — four pillars (built by journalists, tested by publishers, Great Lakes rooted, open-source)
-4. **Civic Action Builder** — spotlight on the first tool, with example output box
+4. **Civic Action Toolbox** — spotlight on the first tool, with example output box
 5. **Who This Is For** — four audience cards
 6. **Tools in Development** — pipeline of upcoming tools (Building Now + Designing Next)
 7. **Quote** — pull quote from Nina

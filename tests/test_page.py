@@ -54,7 +54,14 @@ check(
     'class="waitlist-form"' not in html_src and 'id="organization"' not in html_src,
 )
 
-# 4. The GA snippet no longer references form fields that don't exist
+# 4. The tool is consistently called "Civic Action Toolbox" — the old
+#    "Civic Action Builder" name should not appear anywhere on the page.
+check(
+    'Tool named "Toolbox" everywhere, no "Builder" left',
+    "Civic Action Builder" not in html_src and "Civic Action Toolbox" in html_src,
+)
+
+# 5. The GA snippet no longer references form fields that don't exist
 #    (the old submit handler read #organization and #role).
 ga_block = re.search(r"<script>(.*?)</script>", html_src, re.S).group(1)
 check(
