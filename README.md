@@ -17,27 +17,27 @@ A single-page marketing site that explains what the Civic Action Lab is, what to
 
 GitHub Pages serves the `main` branch automatically. Any push to `main` triggers a deploy — usually live within a minute or two. There is no build process; the HTML and CSS are served directly.
 
-## Waitlist form (Formspree)
+## Waitlist form (Google Form)
 
-The waitlist form collects: **Name, Email, Organization, Role**.
+The waitlist is the **"Civic Action Toolbox — Beta Waitlist"** Google Form, embedded in the page as an iframe. It asks for name, email, role, publication details, CMS, coverage area, reporting types, network memberships, and webinar interest.
 
-It uses [Formspree](https://formspree.io) to handle submissions — no backend needed. Formspree stores all responses in a dashboard and sends email notifications.
+A "Trouble seeing the form?" link below the embed opens the same form in a new tab, for anyone whose browser blocks embedded Google content.
 
-### Setup
+### Editing the form
 
-The form is connected to Formspree form ID `meedlkwr`. Email notifications go to Nina and Ashley.
-
-To change notification recipients, log into [formspree.io](https://formspree.io) and update the form's **Settings > Email Notifications**.
+Edit questions directly in Google Forms (whoever owns the form in Google Drive). Question changes appear on the site automatically — no code change needed. Only replace the iframe URL in `index.html` if you switch to a *different* form.
 
 ### Viewing responses
 
-All submissions are stored in the Formspree dashboard at [formspree.io/forms](https://formspree.io/forms). You can also export them as CSV from there.
+Open the form in Google Forms and click the **Responses** tab. From there you can link responses to a Google Sheet for sorting and export.
 
-### Formspree free tier limits
+### Analytics note
 
-- 50 submissions per month
-- 2 email recipients
-- If you exceed this, Formspree has paid plans starting at $10/month
+Because submissions happen inside Google's iframe, Google Analytics on this page cannot count signups — the response count in Google Forms is the source of truth. GA does track clicks on the "open it in a new tab" link.
+
+### History
+
+The waitlist previously used Formspree (form ID `meedlkwr`, 4 fields: Name, Email, Organization, Role). Replaced with the Google Form in August 2026. Old responses remain in the Formspree dashboard at [formspree.io/forms](https://formspree.io/forms).
 
 ## Page sections
 
@@ -49,7 +49,7 @@ All submissions are stored in the Formspree dashboard at [formspree.io/forms](ht
 6. **Tools in Development** — pipeline of upcoming tools (Building Now + Designing Next)
 7. **Quote** — pull quote from Nina
 8. **About** — background on Planet Detroit and the lab
-9. **Waitlist** — sign-up form for interested newsrooms
+9. **Waitlist** — embedded Google Form (Civic Action Toolbox beta waitlist)
 10. **Work With Us** — direct contact CTA + link to planetdetroit.org
 
 ## Files
@@ -60,6 +60,7 @@ All submissions are stored in the Formspree dashboard at [formspree.io/forms](ht
 | `styles.css` | All styles |
 | `og-image.png` | Social sharing image (1200x630) |
 | `CNAME` | Custom domain config for GitHub Pages |
+| `tests/test_page.py` | Checks the waitlist embed is wired correctly (`python3 tests/test_page.py`) |
 | `.gitignore` | Ignores `.DS_Store` |
 
 ## Making changes
