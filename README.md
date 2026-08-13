@@ -19,13 +19,11 @@ GitHub Pages serves the `main` branch automatically. Any push to `main` triggers
 
 ## Waitlist form (Google Form)
 
-The waitlist is the **"Civic Action Toolbox — Beta Waitlist"** Google Form, embedded in the page as an iframe. It asks for name, email, role, publication details, CMS, coverage area, reporting types, network memberships, and webinar interest.
-
-A "Trouble seeing the form?" link below the embed opens the same form in a new tab, for anyone whose browser blocks embedded Google content.
+The waitlist is the **"Civic Action Toolbox — Beta Waitlist"** Google Form. The waitlist section has a "Join the beta waitlist" button that opens the form in a new tab. (We tried embedding the form as an iframe first — it rendered badly against the dark background, so the button won.) The form asks for name, email, role, publication details, CMS, coverage area, reporting types, network memberships, and webinar interest.
 
 ### Editing the form
 
-Edit questions directly in Google Forms (whoever owns the form in Google Drive). Question changes appear on the site automatically — no code change needed. Only replace the iframe URL in `index.html` if you switch to a *different* form.
+Edit questions directly in Google Forms (whoever owns the form in Google Drive) — no code change needed. Only replace the button's URL in `index.html` if you switch to a *different* form.
 
 ### Viewing responses
 
@@ -33,7 +31,7 @@ Open the form in Google Forms and click the **Responses** tab. From there you ca
 
 ### Analytics note
 
-Because submissions happen inside Google's iframe, Google Analytics on this page cannot count signups — the response count in Google Forms is the source of truth. GA does track clicks on the "open it in a new tab" link.
+Google Analytics tracks clicks on the waitlist button (`waitlist_click` event) but cannot see whether the form was completed — the response count in Google Forms is the source of truth for signups.
 
 ### History
 
@@ -49,7 +47,7 @@ The waitlist previously used Formspree (form ID `meedlkwr`, 4 fields: Name, Emai
 6. **Tools in Development** — pipeline of upcoming tools (Building Now + Designing Next)
 7. **Quote** — pull quote from Nina
 8. **About** — background on Planet Detroit and the lab
-9. **Waitlist** — embedded Google Form (Civic Action Toolbox beta waitlist)
+9. **Waitlist** — button opening the Civic Action Toolbox beta waitlist Google Form
 10. **Work With Us** — direct contact CTA + link to planetdetroit.org
 
 ## Files

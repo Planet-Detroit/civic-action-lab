@@ -28,24 +28,23 @@ def check(name, condition, detail=""):
 
 html_src = INDEX.read_text()
 
-# 1. The Google Form is embedded in the page as an iframe (embedded=true keeps
-#    Google's own chrome minimal inside the frame).
-iframe_match = re.search(r'<iframe[^>]+src="([^"]+)"', html_src)
+# 1. The waitlist section has a button-styled link that opens the Google Form
+#    in a new tab (btn-primary class = styled as a button, not a text link).
+btn = re.search(
+    r'<a[^>]+href="' + re.escape(GFORM_URL) + r'"[^>]*>', html_src
+)
 check(
-    "Google Form iframe is embedded",
-    iframe_match is not None and iframe_match.group(1).startswith(GFORM_URL)
-    and "embedded=true" in iframe_match.group(1),
-    f"found: {iframe_match.group(1) if iframe_match else 'no iframe'}",
+    "Waitlist button links to the Google Form",
+    btn is not None
+    and "btn-primary" in btn.group(0)
+    and 'target="_blank"' in btn.group(0)
+    and 'rel="noopener"' in btn.group(0),
+    f"found: {btn.group(0) if btn else 'no link to form'}",
 )
 
-# 2. A plain link to the same form exists as a fallback (opens in a new tab)
-#    for anyone whose browser blocks the embed.
-fallback = re.search(
-    r'<a[^>]+href="' + re.escape(GFORM_URL) + r'[^"]*"[^>]+target="_blank"', html_src
-) or re.search(
-    r'<a[^>]+target="_blank"[^>]+href="' + re.escape(GFORM_URL) + r'[^"]*"', html_src
-)
-check("Fallback open-in-new-tab link exists", fallback is not None)
+# 2. No embedded iframe — Nina rejected the embed (looked broken); the button
+#    is the intended design. This catches an accidental revert.
+check("No Google Form iframe on the page", "<iframe" not in html_src)
 
 # 3. Formspree is gone — no action URL, no leftover <form> in the waitlist.
 check("No Formspree references remain", "formspree" not in html_src.lower())

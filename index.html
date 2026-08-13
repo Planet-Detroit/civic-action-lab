@@ -38,12 +38,13 @@
       gtag('event', 'cta_click', { link_text: 'Get in touch - footer', link_url: link.href });
     } else if (link.classList.contains('btn-secondary')) {
       gtag('event', 'cta_click', { link_text: 'Visit Planet Detroit', link_url: link.href });
-    } else if (link.classList.contains('waitlist-open-link')) {
-      gtag('event', 'cta_click', { link_text: 'Open waitlist form in new tab', link_url: link.href });
+    } else if (link.classList.contains('waitlist-cta')) {
+      gtag('event', 'waitlist_click', { link_text: 'Join the beta waitlist', link_url: link.href });
     }
   });
-  // Note: signups now happen inside the embedded Google Form, which GA on this
-  // page can't observe. The signup count lives in the Google Form's Responses tab.
+  // Note: signups happen on the Google Form, which GA on this page can't observe.
+  // GA counts clicks on the waitlist button; the Google Form's Responses tab is
+  // the source of truth for completed signups.
 </script>
 </head>
 <body>
@@ -223,8 +224,8 @@
     <div class="section-label">Join the Beta Waitlist</div>
     <h2>Be first to try the Civic Action Toolbox at your newsroom.</h2>
     <p class="body">The Civic Action Toolbox turns any story into a civic action box — one deadline, one action, and a count of what your readers did. The free version opens for beta testing in early 2027. Join the list and we'll be in touch with next steps and an invite to a preview webinar.</p>
-    <iframe class="waitlist-embed" src="https://docs.google.com/forms/d/e/1FAIpQLSe5XGSfHNzg9tgDWIGP4QKfFAFhV_vvY-Gl3NdPk4IQWWqSvQ/viewform?embedded=true" title="Civic Action Toolbox — Beta Waitlist signup form" loading="lazy">Loading&hellip;</iframe>
-    <p class="waitlist-fallback">Trouble seeing the form? <a href="https://docs.google.com/forms/d/e/1FAIpQLSe5XGSfHNzg9tgDWIGP4QKfFAFhV_vvY-Gl3NdPk4IQWWqSvQ/viewform" class="waitlist-open-link" target="_blank" rel="noopener">Open it in a new tab &rarr;</a></p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe5XGSfHNzg9tgDWIGP4QKfFAFhV_vvY-Gl3NdPk4IQWWqSvQ/viewform" class="btn-primary waitlist-cta" target="_blank" rel="noopener">Join the beta waitlist &rarr;</a>
+    <p class="waitlist-note">Opens a short form — takes about two minutes.</p>
   </div>
 </div>
 
