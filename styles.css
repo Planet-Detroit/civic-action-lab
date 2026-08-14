@@ -6,19 +6,19 @@ body { font-family: Georgia, "Times New Roman", serif; color: rgb(47, 51, 62); b
 
 .hero { background: rgb(47, 51, 62); color: rgb(255, 255, 255); padding: 80px 40px 72px; text-align: center; }
 
-.hero-eyebrow { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgb(45, 128, 195); margin-bottom: 20px; }
+.hero-eyebrow { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgb(41, 130, 196); margin-bottom: 20px; }
 
 .hero h1 { font-size: clamp(36px, 5vw, 58px); line-height: 1.1; font-weight: normal; max-width: 760px; margin: 0 auto 24px; letter-spacing: -0.5px; }
 
-.hero h1 em { font-style: italic; color: rgb(45, 128, 195); }
+.hero h1 em { font-style: italic; color: rgb(41, 130, 196); }
 
 .hero-sub { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 18px; line-height: 1.6; max-width: 580px; margin: 0 auto 40px; color: rgb(197, 216, 237); font-weight: 300; }
 
 .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
-.hero-cta { display: inline-block; background: rgb(45, 128, 195); color: rgb(255, 255, 255); font-family: "Helvetica Neue", Arial, sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 2px; transition: background 0.2s, color 0.2s; }
+.hero-cta { display: inline-block; background: rgb(41, 130, 196); color: rgb(255, 255, 255); font-family: "Helvetica Neue", Arial, sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 2px; transition: background 0.2s, color 0.2s; }
 
-.hero-cta:hover { background: rgb(35, 108, 170); }
+.hero-cta:hover { background: rgb(33, 106, 160); }
 
 .hero-cta-secondary { background: transparent; border: 2px solid rgba(197, 216, 237, 0.5); padding: 12px 30px; }
 
@@ -28,7 +28,7 @@ body { font-family: Georgia, "Times New Roman", serif; color: rgb(47, 51, 62); b
 
 section { padding: 72px 40px; max-width: 1100px; margin: 0 auto; }
 
-.section-label { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgb(45, 128, 195); margin-bottom: 16px; }
+.section-label { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgb(41, 130, 196); margin-bottom: 16px; }
 
 h2 { font-size: clamp(28px, 3.5vw, 42px); font-weight: normal; line-height: 1.2; margin-bottom: 24px; letter-spacing: -0.3px; color: rgb(47, 51, 62); }
 
@@ -40,19 +40,19 @@ p.body { font-size: 18px; line-height: 1.7; color: rgb(68, 68, 68); max-width: 6
 
 .pillars-inner { max-width: 1100px; margin: 0 auto; }
 
-.pillars .section-label { color: rgb(45, 128, 195); }
+.pillars .section-label { color: rgb(41, 130, 196); }
 
 .pillars h2 { color: rgb(255, 255, 255); margin-bottom: 48px; }
 
 .pillars-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; }
 
-.pillar-num { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; color: rgb(45, 128, 195); margin-bottom: 12px; }
+.pillar-num { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; color: rgb(41, 130, 196); margin-bottom: 12px; }
 
 .pillar h3 { font-size: 22px; font-weight: normal; margin-bottom: 12px; color: rgb(255, 255, 255); line-height: 1.25; }
 
 .pillar p { font-size: 15px; line-height: 1.65; color: rgb(197, 216, 237); font-family: "Helvetica Neue", Arial, sans-serif; }
 
-.pillar-divider { width: 32px; height: 2px; background: rgb(45, 128, 195); margin-bottom: 16px; }
+.pillar-divider { width: 32px; height: 2px; background: rgb(41, 130, 196); margin-bottom: 16px; }
 
 /* SPOTLIGHT */
 
@@ -60,11 +60,11 @@ p.body { font-size: 18px; line-height: 1.7; color: rgb(68, 68, 68); max-width: 6
 
 .spotlight-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
 
-.spotlight-tag { display: inline-block; background: rgb(45, 128, 195); color: rgb(255, 255, 255); font-family: "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 5px 12px; margin-bottom: 20px; }
+.spotlight-tag { display: inline-block; background: rgb(41, 130, 196); color: rgb(255, 255, 255); font-family: "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 5px 12px; margin-bottom: 20px; }
 
-.time-callout { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 20px; font-weight: 700; color: rgb(45, 128, 195); border-left: 3px solid rgb(45, 128, 195); padding-left: 20px; margin-top: 28px; line-height: 1.4; }
+.time-callout { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 20px; font-weight: 700; color: rgb(41, 130, 196); border-left: 3px solid rgb(41, 130, 196); padding-left: 20px; margin-top: 28px; line-height: 1.4; }
 
-.preview-box { background: rgb(255, 255, 255); border: 1px solid rgb(197, 216, 237); border-radius: 4px; padding: 28px; box-shadow: 0 4px 20px rgba(45, 128, 195, 0.1); }
+.preview-box { background: rgb(255, 255, 255); border: 1px solid rgb(197, 216, 237); border-radius: 4px; padding: 28px; box-shadow: 0 4px 20px rgba(41, 130, 196, 0.1); }
 
 .preview-box-label { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: rgb(136, 136, 136); margin-bottom: 16px; }
 
@@ -74,21 +74,21 @@ p.body { font-size: 18px; line-height: 1.7; color: rgb(68, 68, 68); max-width: 6
 
 .preview-item:last-child { border-bottom: none; }
 
-.preview-item strong { color: rgb(45, 128, 195); display: block; font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 3px; }
+.preview-item strong { color: rgb(41, 130, 196); display: block; font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 3px; }
 
-.preview-link { display: inline-block; margin-top: 16px; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: 700; color: rgb(45, 128, 195); text-decoration: none; letter-spacing: 0.5px; transition: color 0.2s; }
+.preview-link { display: inline-block; margin-top: 16px; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: 700; color: rgb(41, 130, 196); text-decoration: none; letter-spacing: 0.5px; transition: color 0.2s; }
 
-.preview-link:hover { color: rgb(35, 108, 170); }
+.preview-link:hover { color: rgb(33, 106, 160); }
 
 /* WHO WE SERVE */
 
 .serve { padding: 72px 40px; max-width: 1100px; margin: 0 auto; }
 
-.serve-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 40px; background: rgb(45, 128, 195); }
+.serve-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 40px; background: rgb(41, 130, 196); }
 
 .serve-card { background: rgb(255, 255, 255); padding: 36px; }
 
-.serve-card h3 { font-size: 20px; font-weight: normal; margin-bottom: 12px; color: rgb(45, 128, 195); }
+.serve-card h3 { font-size: 20px; font-weight: normal; margin-bottom: 12px; color: rgb(41, 130, 196); }
 
 .serve-card p { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 15px; color: rgb(85, 85, 85); line-height: 1.6; }
 
@@ -98,11 +98,11 @@ p.body { font-size: 18px; line-height: 1.7; color: rgb(68, 68, 68); max-width: 6
 
 .tools-dev-inner { max-width: 1100px; margin: 0 auto; }
 
-.tools-tier-label { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgb(45, 128, 195); margin-bottom: 0; margin-top: 48px; }
+.tools-tier-label { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgb(41, 130, 196); margin-bottom: 0; margin-top: 48px; }
 
 .tools-tier-label:first-of-type { margin-top: 0; }
 
-.tools-grid { display: grid; gap: 2px; margin-top: 16px; background: rgb(45, 128, 195); }
+.tools-grid { display: grid; gap: 2px; margin-top: 16px; background: rgb(41, 130, 196); }
 
 .tools-grid-2 { grid-template-columns: repeat(2, 1fr); }
 
@@ -110,7 +110,7 @@ p.body { font-size: 18px; line-height: 1.7; color: rgb(68, 68, 68); max-width: 6
 
 .tool-card { background: rgb(244, 248, 253); padding: 36px; }
 
-.tool-status-active { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgb(45, 128, 195); margin-bottom: 14px; }
+.tool-status-active { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgb(41, 130, 196); margin-bottom: 14px; }
 
 .tool-status-exploring { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgb(136, 136, 136); margin-bottom: 14px; }
 
@@ -122,7 +122,7 @@ p.body { font-size: 18px; line-height: 1.7; color: rgb(68, 68, 68); max-width: 6
 
 /* QUOTE */
 
-.quote-section { background: rgb(45, 128, 195); padding: 72px 40px; text-align: center; }
+.quote-section { background: rgb(41, 130, 196); padding: 72px 40px; text-align: center; }
 
 .quote-section blockquote { font-size: clamp(22px, 3vw, 34px); line-height: 1.4; color: rgb(255, 255, 255); max-width: 760px; margin: 0 auto 24px; font-weight: normal; font-style: italic; }
 
@@ -138,7 +138,7 @@ p.body { font-size: 18px; line-height: 1.7; color: rgb(68, 68, 68); max-width: 6
 
 .waitlist-inner { max-width: 680px; margin: 0 auto; }
 
-.waitlist .section-label { color: rgb(45, 128, 195); }
+.waitlist .section-label { color: rgb(41, 130, 196); }
 
 .waitlist h2 { color: rgb(255, 255, 255); margin-bottom: 16px; }
 
@@ -156,13 +156,13 @@ p.body { font-size: 18px; line-height: 1.7; color: rgb(68, 68, 68); max-width: 6
 
 .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 
-.btn-primary { display: inline-block; background: rgb(45, 128, 195); color: rgb(255, 255, 255); font-family: "Helvetica Neue", Arial, sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 2px; transition: background 0.2s; }
+.btn-primary { display: inline-block; background: rgb(41, 130, 196); color: rgb(255, 255, 255); font-family: "Helvetica Neue", Arial, sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border-radius: 2px; transition: background 0.2s; }
 
-.btn-primary:hover { background: rgb(35, 108, 170); }
+.btn-primary:hover { background: rgb(33, 106, 160); }
 
-.btn-secondary { display: inline-block; background: transparent; color: rgb(45, 128, 195); font-family: "Helvetica Neue", Arial, sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border: 2px solid rgb(45, 128, 195); border-radius: 2px; transition: background 0.2s, color 0.2s; }
+.btn-secondary { display: inline-block; background: transparent; color: rgb(41, 130, 196); font-family: "Helvetica Neue", Arial, sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; padding: 14px 32px; text-decoration: none; border: 2px solid rgb(41, 130, 196); border-radius: 2px; transition: background 0.2s, color 0.2s; }
 
-.btn-secondary:hover { background: rgb(45, 128, 195); color: rgb(255, 255, 255); }
+.btn-secondary:hover { background: rgb(41, 130, 196); color: rgb(255, 255, 255); }
 
 footer { background: rgb(47, 51, 62); color: rgb(136, 136, 136); text-align: center; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 12px; padding: 24px; }
 

@@ -62,6 +62,14 @@ check(
     "Civic Action Builder" not in html_src and "Civic Action Toolbox" in html_src,
 )
 
+# 4b. Brand blue matches the Planet Detroit design system (#2982C4 =
+#     rgb(41, 130, 196)) — the old off-brand rgb(45, 128, 195) must not return.
+css_src = (INDEX.parent / "styles.css").read_text()
+check(
+    "Brand blue #2982C4 used, old blue gone",
+    "45, 128, 195" not in css_src + html_src and "41, 130, 196" in css_src,
+)
+
 # 5. The GA snippet no longer references form fields that don't exist
 #    (the old submit handler read #organization and #role).
 ga_block = re.search(r"<script>(.*?)</script>", html_src, re.S).group(1)
